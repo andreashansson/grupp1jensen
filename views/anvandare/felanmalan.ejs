@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Felanmälan</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <% include ../partials/nav %>
+
+  <div>
+    <form action="">
+      <h2>Felanmälan</h2>
+      <select name="typeof" id="typeof">
+        <option value="omrade">Område</option>
+        <option value="olja">Olja</option>
+        <option value="spolarvatska">Spolarvätska</option>
+        <option value="torkarblad">Torkarblad</option>
+        <option value="kylarvatska">Kylarvätska</option>
+        <option value="dack">Däck</option>
+        <option value="klimatanlaggning">Klimatanläggning</option>
+      </select>
+      <button>Skicka</button>
+    </form>
+  </div>
+</body>
+</html>
