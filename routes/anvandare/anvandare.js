@@ -3,5 +3,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.use(require('./minprofil'));
+router.use(require('./andralosen'));
 
 module.exports = router;
