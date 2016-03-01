@@ -64,7 +64,15 @@ img {
 	border:5px green solid;
 	margin:20px;
 	margin:auto;
-	width: 850px;
+	width: 950px;
+}
+
+.navdiv ul {
+
+	color:green;
+	list-style: none;
+	margin-left:50px;
+
 }
 
 .navdiv ul {
@@ -78,6 +86,35 @@ img {
 .navdiv ul li {
 
 	float: left;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.flexbox{
+	display: -webkit-flex;
+    display: flex;
+    width: 960px;
+    margin: auto;
+}
+.userlist{
+	border:1px solid black;
+	width: 200px;
+	margin-top: 10px
+}
+.userinfo{
+width: 700px;
+margin: 10px;
+padding: 30px;
+border:1px solid black;
+}
+.userinfo button{
+	float: right;
+	margin-top: 100px
+}
+.userinfo img{
+		float: right;
+}
+.bokdetatil{
+	width: 550px;
+	height: 70px;
+	border:solid black 3px;
 }
