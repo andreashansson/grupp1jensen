@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/service', function(req, res, next) {
-  res.render('./anvandare/service');
+  res.render('./admin/service');
 });
 
 module.exports = router;
