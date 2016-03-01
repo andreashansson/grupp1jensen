@@ -13,7 +13,7 @@ img {
 	height: 70px;
 }
 
-li {
+.right ul li {
 
 	list-style: none;
 
@@ -51,21 +51,28 @@ li {
 
 	width: 200px;
 
-.navdiv{
+}
+
+.navdiv {
+
 	height: 50px;
 	border:5px green solid;
 	margin:20px;
 	margin:auto;
 	width: 950px;
 }
-.navbar{
-color:green;
-list-style: none;
-margin-left:50px;
 
+
+.navdiv ul {
+
+	color:green;
+	list-style: none;
+	margin-left:50px;
 
 }
-.navbar li{
+
+.navdiv ul li {
+
 	float: left;
 	margin-left: 20px;
 	margin-right: 20px;
