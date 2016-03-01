@@ -6,9 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-
-var anvandare = require('./routes/anvandare/anvandare');
 var admin = require('./routes/admin/admin');
+var anvandare = require('./routes/anvandare/anvandare')
 
 var app = express();
 
