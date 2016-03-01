@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ändra lösenord</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<head>
+  <title>Ändra lösenord</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
   <body>
     <% include ../partials/nav %>
     <h1>Fyll i dina önskemål!</h1>
     <div>
-        <form action="">
-            <label for="from">Fr.o.m:</label>
-            <input type="date" name="from" id="from">
-            <button>Sök lediga bilar</button>
-        </form>
-    </div>
+      <form action="">
+        <div>
+          <label for="from">Fr.o.m:</label>
+          <input type="date" name="from" id="from">
+          <label for="tom">T.o.m</label>
+          <input type="date" name="tom" id="tom">
+        </div>
+        <br>
+        <div>
+          <label for="biltyp">Biltyp</label>
+          <select name="" id="biltyp"><option>
+            -Välj-
+          </option>
+        </select>
+        <label for="drivmedel">Drivmed</label>
+        <select name="" id="drivmedel"><option>
+          -Välj-
+        </option>
+      </select>
+      <label for="vaxellada">Vaxellåda</label>
+      <select name="" id="vaxellada"><option>
+        -Välj-
+      </option>
+    </select>
+    <label for="drivhjul">Drivhjul</label>
+    <select name="" id="drivhjul"><option>
+      -Välj-
+    </option>
+  </select>
+  </div>
+  <br>
+  <div>
+    <label for="dragkrok">Dragkrok</label>
+    <input type="checkbox" name="dragkrok" id="dragkrok">
+    <label for="tjanst">I tjänst</label>
+    <input type="checkbox" name="tjanst" id="tjanst">
+    <label for="privat">Privat</label>
+    <input type="checkbox" name="privat" id="privat">
+  </div>
+  <br>
+  <div><button>Sök lediga bilar</button></div>
+  </form>
+  </div>
   </body>
 </html>
