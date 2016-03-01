@@ -1,16 +1,21 @@
 body {
+
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
+
   color: #00B7FF;
+
 }
 
 img {
 
 	width: 70px;
 	height: 70px;
+
 }
 
 .right ul li {
@@ -62,6 +67,13 @@ img {
 	width: 950px;
 }
 
+.navdiv ul {
+
+	color:green;
+	list-style: none;
+	margin-left:50px;
+
+}
 
 .navdiv ul {
 
