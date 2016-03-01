@@ -10,15 +10,26 @@
   <div>
     <form action="">
       <h2>Felanmälan</h2>
-      <select name="typeof" id="typeof">
-        <option value="omrade">Område</option>
-        <option value="olja">Olja</option>
-        <option value="spolarvatska">Spolarvätska</option>
-        <option value="torkarblad">Torkarblad</option>
-        <option value="kylarvatska">Kylarvätska</option>
-        <option value="dack">Däck</option>
-        <option value="klimatanlaggning">Klimatanläggning</option>
-      </select>
+      <div>
+        <label for="bil">Välj bil</label>
+        <select id='bil'>
+          <option>bil 1</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="typeof">Område</label>
+        <select name="typeof" id="typeof">
+          <option value="belysning">Belysning</option>
+          <option value="olja">Olja</option>
+          <option value="spolarvatska">Spolarvätska</option>
+          <option value="torkarblad">Torkarblad</option>
+          <option value="kylarvatska">Kylarvätska</option>
+          <option value="dack">Däck</option>
+          <option value="klimatanlaggning">Klimatanläggning</option>
+        </select>
+      </div>
+      <br>
       <button>Skicka</button>
     </form>
   </div>
