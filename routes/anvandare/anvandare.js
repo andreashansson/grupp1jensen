@@ -11,6 +11,7 @@ router.use(require('./minabokningar'));
 router.use(require('./felanmalan'));
 router.use(require('./mittkonto'));
 router.use(require('./minprofil'));
+router.use(require('./minabokningar'));
 router.use(require('./andralosen'));
 
 module.exports = router;
