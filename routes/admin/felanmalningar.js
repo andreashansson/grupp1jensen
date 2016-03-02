@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/felanmalningar', function(req, res, next) {
-  res.render('./anvandare/felanmalningar');
+  res.render('./admin/felanmalningar');
 });
 
 module.exports = router;
