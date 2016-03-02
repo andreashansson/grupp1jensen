@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var FelanmModel = require('../../mongotest')
+var FelanmModel = require('../../mongotest');
+var dateHelper = require('../../helpers/helper').dater;
 /* GET home page. */
 router.get('/felanmalan', function(req, res, next) {
   res.render('./anvandare/felanmalan');
@@ -8,12 +9,13 @@ router.get('/felanmalan', function(req, res, next) {
 
 router.post('/felanmalan', function (req, res, next) {
   req.body.klar = false;
+  req.body.skapad = dateHelper();
 
   FelanmModel.create(req.body, (err, savedFelanm) => {
     if (err) {
       next(err);
     } else {
-      console.log(savedFelanm);
+      res.render('./anvandare/felanmalan', {thanks: true});
     }
   })
 

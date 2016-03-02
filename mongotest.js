@@ -18,6 +18,12 @@ var FelanmalanSchema = new mongoose.Schema({
   },
   "klar": {
     type: Boolean
+  },
+  "skapad": {
+    type: String
+  },
+  "fixad": {
+    type: String
   }
 });
 
