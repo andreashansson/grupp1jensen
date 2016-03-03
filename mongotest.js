@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/grupp1jensen');
+//mongoose.connect('mongodb://localhost/grupp1jensen');
 
 var FelanmalanSchema = new mongoose.Schema({
   "bil": {

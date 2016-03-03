@@ -10,8 +10,11 @@
 <div class="flexbox">
 	<div class="userlist">
 		<ol>
-			<li>användare</li><hr/>
-			<li>användare</li>
+
+			<% anvandare.forEach(function(anv) { %>
+			<li><%= anv.name %></li>
+			<% }); %>
+
 		</ol>
 	</div>
 	<div class="userinfo">
