@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var FelanmModel = require('../../mongotest');
+var mongoose = require('mongoose');
+var FelanmModel = require('../../model/FelanmModel');
 var dateHelper = require('../../helpers/helper').dater;
 /* GET home page. */
 router.get('/felanmalan', function(req, res, next) {

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var FelanmModel = require('../../mongotest');
+var FelanmModel = require('../../model/FelanmModel');
 var dateHelper = require('../../helpers/helper').dater;
 
 
