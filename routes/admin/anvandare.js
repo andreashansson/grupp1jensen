@@ -16,7 +16,7 @@ router.get('/anvandare', function(req, res, next) {
 			anvandare: anvandare
 
 		});
-		
+
 	}, function(err) {
 
 		console.log(err);

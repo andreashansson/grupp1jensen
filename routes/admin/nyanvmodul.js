@@ -6,12 +6,13 @@ mongoose.connect('mongodb://localhost/grupp1');
 
 var userSchema = new Schema({
 
+	id: Number,
 	name: String,
-	pwd: String
-	//mobil: String,
-	//admin: boolean,
-	//email: String,
-	//times: Number
+	pwd: String,
+	mobil: String,
+	admin: Boolean,
+	email: String,
+	timesPrivate: Number
 
 });
 
