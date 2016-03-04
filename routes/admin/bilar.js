@@ -11,6 +11,13 @@ router.get('/bilar', function(req, res, next) {
   }, (err) => {});
 });
 
+router.post('/bilar', function(req, res, next) {
+
+  BilarModel.find({bil: req.body.sok}.then((bil) => {
+    res.render('./admin/bilar', {bilar: bil});
+  }, (err) => {}))
+})
+
 module.exports = router;
 
 
