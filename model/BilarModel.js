@@ -20,9 +20,6 @@ var BilSchema = new mongoose.Schema({
   regnummer:{
     type: String
   },
-  bilnamn:{
-    type: String
-  },
   biltyp: {
     type: String,
     required: true
