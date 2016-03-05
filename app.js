@@ -10,8 +10,11 @@ var admin = require('./routes/admin/admin');
 var anvandare = require('./routes/anvandare/anvandare')
 var User = require('./routes/admin/nyanvmodul');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/grupp1');
+
+
 var app = express();
-var anvID = 0;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

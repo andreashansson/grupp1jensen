@@ -29,39 +29,39 @@ router.post('/nyanvandare', function(req, res, next) {
 
   	if (req.body.password[0] === req.body.password[1]) {
 
-  	var correct_pwd = "";
-  	var type = null;
+	  	var correct_pwd = "";
+	  	var type = null;
 
-  	if (req.body.type === "true") {
-		type = true;
-	}
-	else {
-		type = false;
-	}
+	  	if (req.body.type === "true") {
+			type = true;
+		}
+		else {
+			type = false;
+		}
 
-	anvID++;
-	correct_pwd = req.body.password[0];
+		correct_pwd = req.body.password[0];
 
-	User.create({
+		User.create({
 
-      id: anvID,
-      name: req.body.anvnamn,
-      pwd: correct_pwd,
-      mobil: req.body.mobil,
-      admin: type,
-      email: req.body.email,
-      timesPrivate: 0
+			id: anvID++,
+			name: req.body.anvnamn,
+			pwd: correct_pwd,
+			mobil: req.body.mobil,
+			admin: type,
+			email: req.body.email,
+			timesPriate: 0
 
-    });
+	    });
 
-   res.send("Ny användare inlagd");
-   res.end();
+	   	res.end();
 
-   }
+   	}
 
-   else {
-   	res.send("Lösenordet stämmer inte");
-   }
+   	else {
+   		
+   		res.send("Lösenordet stämmer inte");
+   	
+   	}
 
 });
 

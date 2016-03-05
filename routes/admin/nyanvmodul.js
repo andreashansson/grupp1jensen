@@ -2,8 +2,6 @@ var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/grupp1');
-
 var userSchema = new Schema({
 
 	id: Number,

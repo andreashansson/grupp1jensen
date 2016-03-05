@@ -7,13 +7,16 @@ router.get('/anvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
+		/*
 		for (i in anvandare) {
 			console.log(anvandare[i].id);
 		}
+		*/
 
 		res.render('./admin/anvandare', {
 
-			anvandare: anvandare
+			anvandare: anvandare,
+			anvID: 0
 
 		});
 
@@ -24,4 +27,36 @@ router.get('/anvandare', function(req, res, next) {
 	});
 });
 
+
+
+router.get('/anvandare/:id', function(req, res, next) {
+
+	User.find( ).then(function(anvandare) {
+
+		res.render('./admin/anvandare', {
+
+			anvandare: anvandare,
+			anvID: req.params.id
+
+		});
+
+	}, function(err) {
+
+		console.log(err);
+
+	});
+	
+});
+
+
+
 module.exports = router;
+
+/*
+var enanvändare = anvandare.filter(function(element) {
+
+	return element.id == req.params.id;
+
+});
+
+*/
