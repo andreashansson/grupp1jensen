@@ -7,6 +7,7 @@ router.get('/anvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
+		var obj = new Object();
 		/*
 		for (i in anvandare) {
 			console.log(anvandare[i].id);
@@ -16,7 +17,7 @@ router.get('/anvandare', function(req, res, next) {
 		res.render('./admin/anvandare', {
 
 			anvandare: anvandare,
-			anvID: 0
+			singel: obj
 
 		});
 
@@ -32,17 +33,28 @@ router.get('/anvandare', function(req, res, next) {
 router.get('/anvandare/:id', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
+		
+		var obj = new Object();
 
-		/*
 		for (i in anvandare) {
-			console.log(anvandare[i].id);
+			//console.log(anvandare[i].id);
+
+			if (anvandare[i].id==req.params.id) {
+
+				obj._id = anvandare[i]._id;
+				obj.name = anvandare[i].name;
+				obj.mobil = anvandare[i].mobil;
+				obj.email = anvandare[i].email;
+				obj.id = anvandare[i].id;
+				obj.timesPrivate = anvandare[i].timesPrivate;
+				
+			}
 		}
-		*/
 
 		res.render('./admin/anvandare', {
 
 			anvandare: anvandare,
-			anvID: req.params.id
+			singel: obj
 
 		});
 

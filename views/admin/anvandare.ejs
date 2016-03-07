@@ -20,17 +20,16 @@
 		</ol>
 	</div>
 	<div class="userinfo">
-		<a href="/admin/redigeraanvandare/<%= anvandare[anvID]._id %>"><button>Administrera</button></a>
+		<a href="/admin/redigeraanvandare/<%= singel._id %>"><button>Administrera</button></a>
 		<img src="#" alt="user">
-		<p>Namn: <%= anvandare[anvID].name %></p>
-		<p>Telefonenr: <%= anvandare[anvID].mobil %></p>
+		<p>Namn: <%= singel.name %></p>
+		<p>Telefonenr: <%= singel.mobil %></p>
 		<p>Avdelning:</p>
-		<p>Email: <%= anvandare[anvID].email %></p>
-		<p>ID-nr: <%= anvandare[anvID].id %></p>
-		<p>Förbrukade Km: <%= anvandare[anvID].timesPrivate %></p>
+		<p>Email: <%= singel.email %></p>
+		<p>ID-nr: <%= singel.id %></p>
+		<p>Förbrukade Km: <%= singel.timesPrivate %></p>
 		<p>
-
-
+		<%= singel._id %>
 		<div class="bokningar">
 			<p>Bokningar</p>
 			<div class="bokdetatil"></div>
