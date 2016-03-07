@@ -25,13 +25,19 @@ router.get('/anvandare', function(req, res, next) {
 		console.log(err);
 
 	});
+
+
 });
-
-
 
 router.get('/anvandare/:id', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
+
+		/*
+		for (i in anvandare) {
+			console.log(anvandare[i].id);
+		}
+		*/
 
 		res.render('./admin/anvandare', {
 
@@ -48,15 +54,4 @@ router.get('/anvandare/:id', function(req, res, next) {
 	
 });
 
-
-
 module.exports = router;
-
-/*
-var enanvändare = anvandare.filter(function(element) {
-
-	return element.id == req.params.id;
-
-});
-
-*/

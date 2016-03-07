@@ -3,13 +3,14 @@ var router = express.Router();
 var User = require('./nyanvmodul');
 var mongodb = require('mongodb');
 
-var anvID = 0;
+var anvID = null;
 
 /* GET home page. */
 router.get('/nyanvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
+		//anvID = anvandare[anvandare.length-1].id;
 		anvID = anvandare.length;
 
 		res.render('./admin/nyanvandare', {
@@ -23,11 +24,14 @@ router.get('/nyanvandare', function(req, res, next) {
 		console.log(err);
 
 	});
+
 });
 
 router.post('/nyanvandare', function(req, res, next) {
 
   	if (req.body.password[0] === req.body.password[1]) {
+
+  		
 
 	  	var correct_pwd = "";
 	  	var type = null;
