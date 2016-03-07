@@ -127,3 +127,18 @@ border:1px solid black;
 	width: auto;
   height: 150px;
 }
+.container{
+	margin:auto;
+	width: 950px;
+}
+.getbilinfo{
+	border: 3px solid green;
+
+	min-height: 100px;
+}
+.kundinfo{
+	width: 150px;
+	height: 100px;
+	border: 1px solid green;
+	margin-bottom: 50px;
+}
