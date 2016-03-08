@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var FelanmModel = require('../../mongotest');
+
+var FelanmModel = require('../../model/FelanmModel');
+var dateHelper = require('../../helpers/helper').dater;
+
 
 /* GET home page. */
 router.get('/felanmalningar', function(req, res, next) {
@@ -11,12 +14,13 @@ router.get('/felanmalningar', function(req, res, next) {
 
 });
 
+
 router.post('/felanmalningar/:id', function (req, res, next) {
-  FelanmModel.findByIdAndUpdate(req.params.id, {klar: true}, (err, updated) => {
+  FelanmModel.findByIdAndUpdate(req.params.id, {klar: true, fixad: dateHelper() }, (err, updated) => {
     if (err) {
       next(err);
     } else {
-      res.redirect('/admin/felanmalningar');
+      res.redirect('/admin/felanmalningar')
     }
   })
 })

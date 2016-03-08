@@ -69,7 +69,3 @@ router.post('/nyanvandare', function(req, res, next) {
 });
 
 module.exports = router;
-
-//req.body.id/name
-
-// promises

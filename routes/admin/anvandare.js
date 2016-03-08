@@ -27,7 +27,6 @@ router.get('/anvandare', function(req, res, next) {
 
 	});
 
-
 });
 
 router.get('/anvandare/:id', function(req, res, next) {
