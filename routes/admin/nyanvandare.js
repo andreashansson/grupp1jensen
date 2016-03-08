@@ -10,8 +10,18 @@ router.get('/nyanvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
-		//anvID = anvandare.length;
-		anvID = anvandare[anvandare.length-1].id;
+		if (anvandare.length < 1) {
+
+			anvID = anvandare.length;
+
+		}
+		
+		else {
+
+			anvID = anvandare[anvandare.length-1].id;
+		
+		}
+
 		console.log(anvID);
 		
 		res.render('./admin/nyanvandare', {
@@ -56,6 +66,7 @@ router.post('/nyanvandare', function(req, res, next) {
 			timesPrivate: 0
 
 	    });
+
 		res.redirect('/admin/nyanvandare');
 	   	res.end();
 

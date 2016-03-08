@@ -8,12 +8,7 @@ router.get('/anvandare', function(req, res, next) {
 	User.find( ).then(function(anvandare) {
 
 		var obj = new Object();
-		/*
-		for (i in anvandare) {
-			console.log(anvandare[i].id);
-		}
-		*/
-
+		
 		res.render('./admin/anvandare', {
 
 			anvandare: anvandare,
