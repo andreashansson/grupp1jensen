@@ -10,18 +10,26 @@
 <div class="flexbox">
 	<div class="userlist">
 		<ol>
-			<li>användare</li><hr/>
-			<li>användare</li>
+
+			<% anvandare.forEach(function(anv) { %>
+			<li><a href="/admin/anvandare/<%= anv.id %>"><%= anv.name %></a></li>
+			<!--<li><a href="/admin/anvandare/<%= anv._id %>"><%= anv.name %></a></li>-->
+
+			<% }); %>
+
 		</ol>
 	</div>
 	<div class="userinfo">
-		<button>Administrera</button>
+		<a href="/admin/redigeraanvandare/<%= singel._id %>"><button>Administrera</button></a>
 		<img src="#" alt="user">
-		<p>Namn:</p>
-		<p>Telefonenr:</p>
-		<p>Avdelning</p>
-		<p>ID-nr:</p>
-		<p>Förbrukade Km:</p>
+		<p>Namn: <%= singel.name %></p>
+		<p>Telefonenr: <%= singel.mobil %></p>
+		<p>Avdelning:</p>
+		<p>Email: <%= singel.email %></p>
+		<p>ID-nr: <%= singel.id %></p>
+		<p>Förbrukade Km: <%= singel.timesPrivate %></p>
+		<p>
+		<%= singel._id %>
 		<div class="bokningar">
 			<p>Bokningar</p>
 			<div class="bokdetatil"></div>
