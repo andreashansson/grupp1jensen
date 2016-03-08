@@ -10,12 +10,10 @@ router.get('/nyanvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
-		//anvID = anvandare[anvandare.length-1].id;
-		objLength = anvandare.length;
-		anvID = anvandare[objLength-1].id;
-		console.log(anvandare[objLength-1].id);
 		//anvID = anvandare.length;
-
+		anvID = anvandare[anvandare.length-1].id;
+		console.log(anvID);
+		
 		res.render('./admin/nyanvandare', {
 
 			anvandare: anvandare
