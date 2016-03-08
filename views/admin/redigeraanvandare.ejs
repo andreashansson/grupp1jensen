@@ -15,6 +15,19 @@
       <input type="text" name="mobil" id="mobil" value="<%= redanv.mobil %>" /><br><br>
       <label for="anvnamn">Email:</label><br>
       <input type="text" name="email" id="email" value="<%= redanv.email %>" /><br><br>
+
+      <label for="avdelning">Avdelning: <%= redanv.avdelning %></label><br>
+      <select name="avdelning" id="avdelning">
+      
+        <option name="valj" id="valj" value="valj">Välj</option>
+        <option name="eoa" id="eoa" value="Ekonomi och Administration">Ekonomi och Administration</option>
+        <option name="hr" id="hr" value="HR">HR</option>
+        <option name="fom" id="fom" value="Försäljning och Marknad">Försäljning och Marknad</option>
+        <option name="service" id="service" value="Service">Service</option>
+        <option name="it" id="it" value="IT-Avdelningen">IT-Avdelningen</option>
+
+      </select><br><br>
+
       <input type="radio" name="type" id="admin" value="true" />
       <label for="admin">Admin</label>
       <input type="radio" name="type" id="normal" value="false" />

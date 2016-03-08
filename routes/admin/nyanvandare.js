@@ -50,6 +50,7 @@ router.post('/nyanvandare', function(req, res, next) {
 			name: req.body.anvnamn,
 			pwd: correct_pwd,
 			mobil: req.body.mobil,
+			avdelning: req.body.avdelning,
 			admin: type,
 			email: req.body.email,
 			timesPrivate: 0
