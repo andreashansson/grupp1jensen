@@ -13,8 +13,7 @@ var BokningSchema = new mongoose.Schema({
     required: true
   },
   user: {
-    type: String,
-    required: true
+    type: Number
   },
   typ: {
     type: String,
@@ -22,6 +21,10 @@ var BokningSchema = new mongoose.Schema({
   },
   bil: {
     type: String,
+    required: true
+  },
+  aterlamnad: {
+    type: Boolean,
     required: true
   }
 })
