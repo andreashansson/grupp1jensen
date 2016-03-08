@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var BilarModel = require('../../model/BilarModel');
 
-
 /* GET home page. */
 router.get('/bilar', function(req, res, next) {
 
