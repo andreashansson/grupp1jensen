@@ -21,7 +21,7 @@ router.post('/felanmalningar/:id', function (req, res, next) {
     if (err) {
       next(err);
     } else {
-      res.redirect('/'+ req.params.userId + '/admin/felanmalningar')
+      res.redirect('/'+ req.originalUrl.split('/')[1] + '/admin/felanmalningar')
     }
   })
 })
