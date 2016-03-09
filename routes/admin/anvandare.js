@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('./nyanvmodul');
+var User = require('../../model/nyanvmodul');
 
 /* GET home page. */
 router.get('/anvandare', function(req, res, next) {
@@ -32,7 +32,7 @@ router.get('/anvandare', function(req, res, next) {
 router.get('/anvandare/:id', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
-		
+
 		var obj = new Object();
 
 		for (i in anvandare) {
@@ -46,7 +46,7 @@ router.get('/anvandare/:id', function(req, res, next) {
 				obj.email = anvandare[i].email;
 				obj.id = anvandare[i].id;
 				obj.timesPrivate = anvandare[i].timesPrivate;
-				
+
 			}
 		}
 
@@ -62,7 +62,7 @@ router.get('/anvandare/:id', function(req, res, next) {
 		console.log(err);
 
 	});
-	
+
 });
 
 module.exports = router;

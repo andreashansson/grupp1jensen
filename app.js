@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var admin = require('./routes/admin/admin');
 var anvandare = require('./routes/anvandare/anvandare')
-var User = require('./routes/admin/nyanvmodul');
+// var User = require('./routes/admin/nyanvmodul');
 
 var app = express();
 

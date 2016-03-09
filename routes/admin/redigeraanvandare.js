@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('./nyanvmodul');
+var User = require('../../model/nyanvmodul');
 var mongodb = require('mongodb');
 
 /* GET home page. */
@@ -53,10 +53,10 @@ router.post('/redigeraanvandare/:id', function(req, res, next) {
 		}, function(err, updated) {
 
 		if (err) {
-		
+
 			next(err);
 		}
-	
+
 		else {
 
 			res.redirect('/admin/anvandare');
@@ -64,14 +64,14 @@ router.post('/redigeraanvandare/:id', function(req, res, next) {
 			}
 
 		});
-	
+
 	}
 
 	else {
-   		
+
 		res.send("Lösenordet stämmer inte");
-   	
-   	}	
+
+   	}
 
 });
 
