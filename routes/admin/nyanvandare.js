@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('./nyanvmodul');
+var User = require('../../model/nyanvmodul');
 var mongodb = require('mongodb');
 
 var anvID = null;
@@ -23,7 +23,7 @@ router.get('/nyanvandare', function(req, res, next) {
 		}
 
 		console.log(anvID);
-		
+
 		res.render('./admin/nyanvandare', {
 
 			anvandare: anvandare
@@ -73,9 +73,9 @@ router.post('/nyanvandare', function(req, res, next) {
    	}
 
    	else {
-   		
+
    		res.send("Lösenordet stämmer inte");
-   	
+
    	}
 
 });
