@@ -9,6 +9,8 @@
 
     <form action="/admin/redigeraanvandare/<%= redanv._id %>" method="POST">
 
+      <label for="id">Id:</label><br>
+      <input type="text" name="id" id="id" value="<%= redanv.id %>" /><br><br>
     	<label for="anvnamn">Användarnamn:</label><br>
     	<input type="text" name="anvnamn" id="anvnamn" value="<%= redanv.name %>" /><br><br>
       <label for="anvnamn">Mobil:</label><br>
@@ -30,12 +32,12 @@
 
       <input type="radio" name="type" id="admin" value="true" />
       <label for="admin">Admin</label>
-      <input type="radio" name="type" id="normal" value="false" />
+      <input type="radio" name="type" id="normal" checked="true" value="false" />
       <label for="normal">Normal</label><br><br>
     	<label for="password">Lösenord:</label><br>
-    	<input type="password" name="password" id="password" /><br><br>
+    	<input type="password" name="password" id="password" value="redanv.pwd" /><br><br>
       <label for="password">Lösenord igen:</label><br>
-      <input type="password" name="password" id="password" /><br><br>
+      <input type="password" name="password" id="password" value="redanv.pwd" /><br><br>
     	<input type="submit" name="login" id="login" value="Uppdatera" />
 
     </form>
