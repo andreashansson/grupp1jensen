@@ -58,16 +58,8 @@ router.post('/', (req, res, next) => {
   }, (err) => {})
 
   // console.log(typeof(req.body.from) + ' ' + typeof(req.body.tom) );
-})
+});
 
-// router.post('/bokabil', (req, res, err) => {
-//   console.log(req.body);
-//   BokningModel.create(req.body, (err, savedBokning) => {
-//
-//       console.log(savedBokning);
-//       res.render('./anvandare/felanmalan', {thanks: true});
-//   })
-// })
 
 router.post('/bokabil', function (req, res, next) {
   req.body.aterlamnad = false;
