@@ -74,7 +74,11 @@ router.post('/nyanvandare', function(req, res, next) {
 
    	else {
 
-   		res.send("Lösenordet stämmer inte");
+   		res.render('./admin/nyanvandare', {
+
+   			wrongpwd: true
+
+   		});
 
    	}
 

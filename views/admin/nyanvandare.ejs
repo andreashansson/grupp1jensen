@@ -9,6 +9,12 @@
 
     <form action="/admin/nyanvandare" method="POST">
 
+      <% if (locals.wrongpwd) { %>
+
+      <p>Lösenordet stämmer inte</p>
+
+      <% } %>
+
     	<label for="anvnamn">Användarnamn:</label><br>
     	<input type="text" name="anvnamn" id="anvnamn" /><br><br>
       <label for="anvnamn">Mobil:</label><br>
