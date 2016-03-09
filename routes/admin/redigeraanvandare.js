@@ -44,9 +44,11 @@ router.post('/redigeraanvandare/:id', function(req, res, next) {
 
 		User.findByIdAndUpdate(req.params.id, {
 
+			id: req.body.id,
 			name: req.body.anvnamn,
 			pwd: correct_pwd,
 			mobil: req.body.mobil,
+			avdelning: req.body.avdelning,
 			admin: type,
 			email: req.body.email
 

@@ -8,12 +8,7 @@ router.get('/anvandare', function(req, res, next) {
 	User.find( ).then(function(anvandare) {
 
 		var obj = new Object();
-		/*
-		for (i in anvandare) {
-			console.log(anvandare[i].id);
-		}
-		*/
-
+		
 		res.render('./admin/anvandare', {
 
 			anvandare: anvandare,
@@ -43,6 +38,7 @@ router.get('/anvandare/:id', function(req, res, next) {
 				obj._id = anvandare[i]._id;
 				obj.name = anvandare[i].name;
 				obj.mobil = anvandare[i].mobil;
+				obj.avdelning = anvandare[i].avdelning;
 				obj.email = anvandare[i].email;
 				obj.id = anvandare[i].id;
 				obj.timesPrivate = anvandare[i].timesPrivate;

@@ -8,6 +8,7 @@ var userSchema = new Schema({
 	name: String,
 	pwd: String,
 	mobil: String,
+	avdelning: String,
 	admin: Boolean,
 	email: String,
 	timesPrivate: Number

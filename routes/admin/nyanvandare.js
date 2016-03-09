@@ -10,8 +10,18 @@ router.get('/nyanvandare', function(req, res, next) {
 
 	User.find( ).then(function(anvandare) {
 
-		//anvID = anvandare.length;
-		anvID = anvandare[anvandare.length-1].id;
+		if (anvandare.length < 1) {
+
+			anvID = anvandare.length;
+
+		}
+		
+		else {
+
+			anvID = anvandare[anvandare.length-1].id;
+		
+		}
+
 		console.log(anvID);
 
 		res.render('./admin/nyanvandare', {
@@ -50,11 +60,13 @@ router.post('/nyanvandare', function(req, res, next) {
 			name: req.body.anvnamn,
 			pwd: correct_pwd,
 			mobil: req.body.mobil,
+			avdelning: req.body.avdelning,
 			admin: type,
 			email: req.body.email,
 			timesPrivate: 0
 
 	    });
+
 		res.redirect('/admin/nyanvandare');
 	   	res.end();
 
@@ -62,7 +74,11 @@ router.post('/nyanvandare', function(req, res, next) {
 
    	else {
 
-   		res.send("Lösenordet stämmer inte");
+   		res.render('./admin/nyanvandare', {
+
+   			wrongpwd: true
+
+   		});
 
    	}
 
