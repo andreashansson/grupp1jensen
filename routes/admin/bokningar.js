@@ -4,7 +4,7 @@ var BokningModel = require('../../model/BokningModel');
 var BilarModel = require('../../model/BilarModel');
 /* GET home page. */
 router.get('/bokningar', function(req, res, next) {
-  BokningModel.find().then((bokningar) => {
+  BokningModel.find({}).then((bokningar) => {
     // console.log(bokningar);
     BilarModel.find({bil: {$in: bokningar.map( (bokning) => bokning.bil)}}).then((bilar) => {
       console.log(bokningar);
@@ -30,4 +30,25 @@ router.get('/bokningar', function(req, res, next) {
 
 });
 
+
+router.post('/bokningar/:id', function (req, res, next) {
+  BokningModel.findByIdAndUpdate(req.params.id, {aterlamnad: true}, (err, updated) => {
+    if (err) {
+      next(err);
+    } else {
+      res.redirect('/'+ req.originalUrl.split('/')[1] + '/admin/bokningar')
+    }
+  });
+});
+
+
+router.post('/bokningar', function (req, res, next) {
+  BokningModel.findByIdAndRemove(req.body.id, (err, removed) => {
+    if (err) {
+      next(err);
+    } else {
+      res.redirect('/'+ req.originalUrl.split('/')[1] + '/admin/bokningar')
+    }
+  })
+})
 module.exports = router;

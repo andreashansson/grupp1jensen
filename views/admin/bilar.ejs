@@ -15,6 +15,13 @@
 			<input type="text" id="sokbil" name="sokbil">
 			<button>Sök</button>
 		</form>
+		<% if (locals.bilar) {%>
+			<ul>
+				<%bilar.forEach(function (bil){%>
+					<li><%= bil.bil %></li>
+				<%})%>
+			</ul>
+		<%}%>
 	</div>
 	<div class="bil-container">
 		<ul class="bilinfo">
