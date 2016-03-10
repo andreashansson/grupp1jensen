@@ -1,0 +1,235 @@
+body {
+
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+a {
+
+  color: #0040FF;
+
+}
+
+.right ul li {
+
+	list-style: none;
+
+}
+
+.bil-container {
+
+	width: 50%;
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid black;
+
+}
+
+.left , .right {
+
+	display: inline-block;
+
+}
+
+.changeButton {
+
+	width: 100px;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	cursor: pointer;
+	text-align: center;
+
+}
+
+.besiktningTable tr td {
+
+	width: 200px;
+
+}
+
+.navdiv {
+
+	height: 50px;
+	border-radius: 5px;
+	width: 85%;
+
+	background-color: #0040FF;
+
+	padding-left: 50px;
+	padding-right: 50px;
+
+	display: flex;
+	display: -webkit-flex;
+
+	flex-direction: row;
+	-webkit-flex-direction: row;
+
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+
+	align-items: center;
+	-webkit-align-items: center;
+
+}
+
+.navdiv a {
+
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	line-height: 350%;
+}
+
+.navdiv a {
+
+	color: white;
+	text-decoration: none;
+
+}
+
+.navdiv a div:hover {
+
+	color: #0040FF;
+}
+
+.navdiv a div:hover {
+
+	background-color: white;
+
+}
+
+.flexbox{
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+.userlist {
+
+	border:2px solid #0040FF;
+	border-radius: 6px;
+	width: 200px;
+	height: auto;
+	margin-top: 10px
+
+}
+
+.userlist ol li {
+
+	list-style-type: none;
+	margin-left: -20px;
+
+}
+
+.userinfo {
+
+	width: 700px;
+	height: auto;
+	padding-bottom: 20px;
+	margin: 10px;
+	border:2px solid #0040FF;
+	border-radius: 6px;
+
+}
+
+.personalInfo {
+
+	height: 260px;
+
+	display: flex;
+	display: -webkit-flex;
+
+	flex-direction: row;
+	-webkit-flex-direction: row;
+
+	justify-content: center;
+	-webkit-justify-content: center;
+
+	align-items: center;
+	-webkit-align-items: center;
+
+}
+
+.personalInfo .leftUserInfo {
+
+	width: 500px;
+	padding-left: 20px;
+
+}
+
+.personalInfo .rightUserInfo {
+
+	width: 200px;
+	
+	display: flex;
+	display: -webkit-flex;
+
+	flex-direction: column;
+	-webkit-flex-direction: column;
+
+	justify-content: center;
+	-webkit-justify-content: center;
+
+	align-items: center;
+	-webkit-align-items: center;
+
+}
+
+.personalInfo .rightUserInfo p img {
+
+	width: 150px;
+	height: 120px;
+
+}
+
+.personalInfo .rightUserInfo p button {
+
+	width: 140px;
+	height: 30px;
+	background-color: white;
+	color: #0040FF;
+	border: 2px solid #0040FF;
+	border-radius: 6px;
+	font-size: 12px;
+
+}
+
+.bokningar {
+
+	margin-left: 20px;
+
+}
+
+
+.bokdetatil{
+	width: 550px;
+	height: 70px;
+	border:solid black 3px;
+}
+.bilinfo{
+	margin: 20px;
+	border: 3px solid black;
+  list-style: none;
+}
+.bilinfo img{
+	width: auto;
+  height: 150px;
+}
+.container{
+	margin:auto;
+	width: 950px;
+}
+.getbilinfo{
+	border: 3px solid green;
+
+	min-height: 100px;
+}
+.kundinfo{
+	width: 150px;
+	height: 100px;
+	border: 1px solid green;
+	margin-bottom: 50px;
+}
