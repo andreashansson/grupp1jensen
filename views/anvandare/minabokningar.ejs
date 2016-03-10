@@ -10,8 +10,8 @@
 	</head>
 
 	<body>
-	    <% include ../partials/nav %>
-		<% if (locals.aktBok) {%>
+	  <% include ../partials/nav %>
+		<% if (locals.aktBok.length > 0) {%>
 		<h2>Aktuella</h2>
 
 		<% aktBok.forEach( function (bokBilarr) { %>
@@ -22,11 +22,13 @@
 
 		  	<div class="right">
 			   	<ul>
-
-			   		<li>Modell: <%= bokBilarr[1].bilmarke %> <%= bokBilarr[1].model %></li>
-			   		<li>Drivmedel: <%= bokBilarr[1].drivmedel  %></li>
-			   		<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>
-			   		<li>Drivhjul: <%= bokBilarr[1].drivhjul %></li>
+						<li>Start datum & tid: <%= bokBilarr[0].from.split('T')[0] + ' ' + bokBilarr[0].from.split('T')[1]%></li>
+            <li>Slut datum & tid: <%= bokBilarr[0].tom.split('T')[0] + ' ' + bokBilarr[0].tom.split('T')[1]%></li>
+            <li>Bil: <%= bokBilarr[1].bil  %></li>
+						<li>Modell: <%= bokBilarr[1].bilmarke %> <%= bokBilarr[1].model %></li>
+						<li>Drivmedel: <%= bokBilarr[1].drivmedel  %></li>
+						<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>
+						<li>Drivhjul: <%= bokBilarr[1].drivhjul %></li>
 			   	</ul>
 			</div>
 
@@ -34,7 +36,7 @@
 		<%})%>
 		<%}%>
 
-		<% if (locals.komBok) {%>
+		<% if (locals.komBok.length > 0) {%>
 		<h2>Kommande</h2>
 
 
@@ -46,11 +48,17 @@
 
 				<div class="right">
 					<ul>
-
+						<li>Start datum & tid: <%= bokBilarr[0].from.split('T')[0] + ' ' + bokBilarr[0].from.split('T')[1]%></li>
+            <li>Slut datum & tid: <%= bokBilarr[0].tom.split('T')[0] + ' ' + bokBilarr[0].tom.split('T')[1]%></li>
+            <li>Bil: <%= bokBilarr[1].bil  %></li>
 						<li>Modell: <%= bokBilarr[1].bilmarke %> <%= bokBilarr[1].model %></li>
 						<li>Drivmedel: <%= bokBilarr[1].drivmedel  %></li>
 						<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>
 						<li>Drivhjul: <%= bokBilarr[1].drivhjul %></li>
+						<form action="minabokningar" method="post">
+							<input type="hidden" name="id" value="<%= bokBilarr[0].id %>">
+							<button>Avboka</button>
+						</form>
 					</ul>
 			</div>
 
@@ -58,12 +66,12 @@
 		<%})%>
 		<%}%>
 
-		<% if (locals.tidBok) {%>
+		<% if (locals.tidBok.length > 0) {%>
 		<h2>Tidigare</h2>
 
 
 
-		<% komBok.forEach( function (bokBilarr) { %>
+		<% tidBok.forEach( function (bokBilarr) { %>
 		<ul class="bil-container">
 			<div class="left">
 					<img src="/images/<%= bokBilarr[1].model.toLowerCase() %>.jpg" />
@@ -71,7 +79,9 @@
 
 				<div class="right">
 					<ul>
-
+						<li>Start datum & tid: <%= bokBilarr[0].from.split('T')[0] + ' ' + bokBilarr[0].from.split('T')[1]%></li>
+            <li>Slut datum & tid: <%= bokBilarr[0].tom.split('T')[0] + ' ' + bokBilarr[0].tom.split('T')[1]%></li>
+            <li>Bil: <%= bokBilarr[1].bil  %></li>
 						<li>Modell: <%= bokBilarr[1].bilmarke %> <%= bokBilarr[1].model %></li>
 						<li>Drivmedel: <%= bokBilarr[1].drivmedel  %></li>
 						<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>

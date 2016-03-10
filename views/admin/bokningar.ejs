@@ -11,7 +11,7 @@
 
 	<body>
 	  <% include ../partials/navadmin %>
-		<% if (locals.aktBok) {%>
+		<% if (locals.aktBok.length > 0) {%>
 		<h2>Aktuella</h2>
 
 		<% aktBok.forEach( function (bokBilarr) { %>
@@ -30,7 +30,9 @@
 			   		<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>
 			   		<li>Drivhjul: <%= bokBilarr[1].drivhjul %></li>
             <li>Användar-ID: <%= bokBilarr[0].user %> </li>
-            <button>återlämna</button>
+						<form action="bokningar/<%= bokBilarr[0].id %>" method="post">
+              <button>Återlämna</button>
+            </form>
 			   	</ul>
 			</div>
 
@@ -38,7 +40,7 @@
 		<%})%>
 		<%}%>
 
-		<% if (locals.komBok) {%>
+		<% if (locals.komBok.length > 0) {%>
 		<h2>Kommande</h2>
 
 
@@ -58,6 +60,10 @@
 						<li>Växellåda: <%= bokBilarr[1].vaxellada %></li>
 						<li>Drivhjul: <%= bokBilarr[1].drivhjul %></li>
             <li>Användar-ID: <%= bokBilarr[0].user %> </li>
+						<form action="bokningar" method="post">
+						  <input type="hidden" name="id" value="<%= bokBilarr[0].id %>">
+              <button>Avboka</button>
+            </form>
 					</ul>
 			</div>
 
@@ -65,12 +71,12 @@
 		<%})%>
 		<%}%>
 
-		<% if (locals.tidBok) {%>
+		<% if (locals.tidBok.length > 0) {%>
 		<h2>Tidigare</h2>
 
 
 
-		<% komBok.forEach( function (bokBilarr) { %>
+		<% tidBok.forEach( function (bokBilarr) { %>
 		<ul class="bil-container">
 			<div class="left">
 					<img src="/images/<%= bokBilarr[1].model.toLowerCase() %>.jpg" />

@@ -23,11 +23,22 @@ router.get('/minabokningar', function(req, res, next) {
           aktBok: aktBok,
           komBok: komBok,
           tidBok: tidBok
-        });
+      });
+      console.log(tidBok);
     })
   })
 
 
 });
+
+router.post('/minabokningar', function (req, res, next) {
+  BokningModel.findByIdAndRemove(req.body.id, (err, removed) => {
+    if (err) {
+      next(err);
+    } else {
+      res.redirect('/'+ req.originalUrl.split('/')[1] + '/anvandare/minabokningar')
+    }
+  })
+})
 
 module.exports = router;
