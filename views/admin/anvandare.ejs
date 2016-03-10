@@ -20,18 +20,30 @@
 			</ol>
 		</div>
 		<div class="userinfo">
-			
-			<a href="/admin/nyanvandare/"><button>Lägg till användare</button></a>
-			<a href="/admin/redigeraanvandare/<%= singel._id %>"><button>Administrera</button></a>
 
-			<img src="#" alt="user">
-			<p>Namn: <%= singel.name %></p>
-			<p>Telefonenr: <%= singel.mobil %></p>
-			<p>Avdelning: <%= singel.avdelning %></p>
-			<p>Email: <%= singel.email %></p>
-			<p>ID-nr: <%= singel.id %></p>
-			<p>Förbrukade Km: <%= singel.timesPrivate %></p>
-			<p>
+			<div class="personalInfo">
+
+				<div class="leftUserInfo">
+
+					<p>Namn: <%= singel.name %></p>
+					<p>Telefonenr: <%= singel.mobil %></p>
+					<p>Avdelning: <%= singel.avdelning %></p>
+					<p>Email: <%= singel.email %></p>
+					<p>ID-nr: <%= singel.id %></p>
+					<p>Förbrukade Km: <%= singel.timesPrivate %></p>
+
+				</div>
+
+				<div class="rightUserInfo">
+				
+					<p><a href="/admin/nyanvandare/"><button>Lägg till användare</button></a></p>
+					<p><img src="/images/persona.jpg" alt="user" /></p>
+					<p><a href="/admin/redigeraanvandare/<%= singel._id %>"><button>Administrera</button></a></p>
+
+				</div>
+
+			</div>
+
 			<div class="bokningar">
 				<p>Bokningar</p>
 				<div class="bokdetatil"></div>
